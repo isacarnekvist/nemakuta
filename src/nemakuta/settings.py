@@ -125,6 +125,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static')
 
 STATICFILES_FINDERS = (
     'djangobower.finders.BowerFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, '..', 'components')
