@@ -1,0 +1,9 @@
+install:
+    "pip install requirements.txt"
+
+env:
+    global:
+        PYTHONPATH: src
+
+script:
+    "python src/manage.py test"
