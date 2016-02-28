@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
+    <h1 class="story">Tree House</h1>
+    <h2 class="story">Always dreamed about living in a tree house?</h2>
+</div>
+<div>
+  <table class="table">
+    <tr>
+      <th>Beds</th>
+      <td>4</td>
+    </tr>
+  </table>
+</div>
+
+<div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
+    <h1 class="story">Tree House</h1>
+    <h2 class="story">Always dreamed about living in a tree house?</h2>
+</div>
+
+{% endblock %}
