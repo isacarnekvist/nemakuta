@@ -3,22 +3,51 @@
 
 {% block content %}
 
-<div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
-    <h1 class="story">Tree House</h1>
-    <h2 class="story">Always dreamed about living in a tree house?</h2>
-</div>
-<div>
-  <table class="table">
-    <tr>
-      <th>Beds</th>
-      <td>4</td>
-    </tr>
-  </table>
-</div>
-
-<div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
-    <h1 class="story">Tree House</h1>
-    <h2 class="story">Always dreamed about living in a tree house?</h2>
-</div>
+<div class="container">
+  <div class="room row">
+    <div class="col-md-5 col-md-offset-2">
+      <div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h1>Tree House</h1>
+      <p>We have a tree house for the adventurous.</p>
+      <table class="table">
+        <tr>
+          <th>Beds</th>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th>Kitchen</th>
+          <td>No</td>
+        </tr>
+      </table>
+      <a href="#">Check availability and book here</a>
+    </div>
+  </div>
+    
+  <div class="room row">
+    <div class="col-md-5 col-md-offset-2">
+      <div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h1>Round House</h1>
+      <p>We have two round houses of different sizes.</p>
+      <table class="table">
+        <tr>
+          <th>Beds</th>
+          <td>4</td>
+        </tr>
+        <tr>
+          <th>Kitchen</th>
+          <td>Yes</td>
+        </tr>
+      </table>
+      <a href="#">Check availability and book here</a>
+    </div>
+  </div>
+    
+</div><!-- container -->
 
 {% endblock %}
