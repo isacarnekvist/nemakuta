@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from web.views import frontpage
+from web.views import frontpage, rooms, blog, booking
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', frontpage),
+    url(r'^$', frontpage, name='home'),
+    url(r'^rooms/', rooms, name='rooms'),
+    url(r'^blog/', blog, name='blog'),
+    url(r'^booking/', booking, name='booking'),
 ]
