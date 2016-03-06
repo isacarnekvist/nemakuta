@@ -3,86 +3,44 @@
 
 {% block content %}
 
-<div>
-  <div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
-    <h1 class="story room-heading">Round House 1</h1>
-  </div>
-  <div class="container room-description">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Description</h2>
-        <p>
-          Of the two round houses we have, this one is the biggest.
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2>Specifications</h2>
-        <table class="table">
-          <tr>
-            <th>Capacity</th>
-            <td>6-12</td>
-          </tr>
-          <tr>
-            <th>Rooms</th>
-            <td>2</td>
-          </tr>
-          <tr>
-            <th>Single beds</th>
-            <td>3</td>
-          </tr>
-          <tr>
-            <th>Double beds</th>
-            <td>3</td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-md-4">
-        <h2>Availability/Booking</h2>
-        <a href="#">Tripadvisor</a>
-      </div>
+{% for house in houses %}
+  <div>
+    <div class="room-heading" style="background-image: url({{ house.img_path }})">
+      <h1 class="story room-heading">{{ house.name }}</h1>
+    </div>
+    <div class="container room-description">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Description</h2>
+          <p>{{ house.desc }}</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Specifications</h2>
+          <table class="table">
+            <tr>
+              <th>Capacity</th>
+              <td>{{ house.min_pers_capacity }} - {{ house.max_pers_capacity }}</td>
+            </tr>
+            <tr>
+              <th>Rooms</th>
+              <td>{{ house.n_rooms }}</td>
+            </tr>
+            <tr>
+              <th>Single beds</th>
+              <td>{{ house.n_singles }}</td>
+            </tr>
+            <tr>
+              <th>Double beds</th>
+              <td>{{ house.n_doubles }}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <h2>Availability/Booking</h2>
+          <a href="{{ house.tripadvisor_book_link }}">Tripadvisor</a>
+        </div>
     </div>
   </div>
-</div>
-
-<div>
-  <div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
-    <h1 class="story room-heading">Tree House</h1>
-  </div>
-  <div class="container room-description">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Description</h2>
-        <p>
-          Of the two round houses we have, this one is the biggest.
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2>Specifications</h2>
-        <table class="table">
-          <tr>
-            <th>Capacity</th>
-            <td>6-12</td>
-          </tr>
-          <tr>
-            <th>Rooms</th>
-            <td>2</td>
-          </tr>
-          <tr>
-            <th>Single beds</th>
-            <td>3</td>
-          </tr>
-          <tr>
-            <th>Double beds</th>
-            <td>3</td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-md-4">
-        <h2>Availability/Booking</h2>
-        <a href="#">Tripadvisor</a>
-      </div>
-    </div>
-  </div>
-</div>
+{% endfor %}
 
 {% endblock %}
