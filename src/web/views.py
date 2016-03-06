@@ -14,19 +14,3 @@ def rooms(request):
         'rooms_active': True,
     }
     return render(request, 'web/rooms.html', context=ctx)
-
-
-def blog(request):
-    ctx = {
-        'blog_active': True,
-    }
-    return render(request, 'web/blog.html', context=ctx)
-
-
-def booking(request):
-    ctx = {
-        'booking_active': True,
-    }
-    return render(request, 'web/booking.html', context=ctx)
-
-
