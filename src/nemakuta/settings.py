@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 ]
 
 FIXTURE_DIRS = [
-    os.path.join(BASE_DIR, 'web', 'fixtures'),
 ]
 
 MIDDLEWARE_CLASSES = [
