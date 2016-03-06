@@ -4,12 +4,9 @@ from django.db import models
 class House(models.Model):
     name = models.CharField(help_text='T ex "Round House 1"', max_length=128)
     desc = models.TextField(help_text='T ex "This is the largest..."')
-    min_pers_capacity = models.SmallIntegerField(
-                                help_text='Hur många är minsta lämpliga ' +
-                                          'antalet att bo i huset? T ex 1')
-    max_pers_capacity = models.IntegerField(
-                                help_text='Hur många kan som mest sova i ' +
-                                          'huset? T ex 10')
+    pers_capacity = models.IntegerField(
+                            help_text='Hur många kan som mest sova i ' +
+                                      'huset? T ex 10')
     n_rooms = models.SmallIntegerField(help_text="Hur många rum har huset?")
     n_doubles = models.SmallIntegerField(help_text="Hur många dubbelsängar?")
     n_singles = models.SmallIntegerField(help_text="Hur många enkelsängar?")
