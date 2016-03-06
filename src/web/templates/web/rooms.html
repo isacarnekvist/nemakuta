@@ -3,51 +3,86 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="room row">
-    <div class="col-md-5 col-md-offset-2">
-      <div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
+<div>
+  <div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
+    <h1 class="story room-heading">Round House 1</h1>
+  </div>
+  <div class="container room-description">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Description</h2>
+        <p>
+          Of the two round houses we have, this one is the biggest.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Specifications</h2>
+        <table class="table">
+          <tr>
+            <th>Capacity</th>
+            <td>6-12</td>
+          </tr>
+          <tr>
+            <th>Rooms</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>Single beds</th>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th>Double beds</th>
+            <td>3</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <h2>Availability/Booking</h2>
+        <a href="#">Tripadvisor</a>
       </div>
     </div>
-    <div class="col-md-4">
-      <h1>Tree House</h1>
-      <p>We have a tree house for the adventurous.</p>
-      <table class="table">
-        <tr>
-          <th>Beds</th>
-          <td>4</td>
-        </tr>
-        <tr>
-          <th>Kitchen</th>
-          <td>No</td>
-        </tr>
-      </table>
-      <a href="#">Check availability and book here</a>
-    </div>
   </div>
-    
-  <div class="room row">
-    <div class="col-md-5 col-md-offset-2">
-      <div class="room-heading" style="background-image: url({% static 'img/rooms/roundhouse.jpg' %})">
+</div>
+
+<div>
+  <div class="room-heading" style="background-image: url({% static 'img/rooms/treehouse.jpg' %})">
+    <h1 class="story room-heading">Tree House</h1>
+  </div>
+  <div class="container room-description">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Description</h2>
+        <p>
+          Of the two round houses we have, this one is the biggest.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>Specifications</h2>
+        <table class="table">
+          <tr>
+            <th>Capacity</th>
+            <td>6-12</td>
+          </tr>
+          <tr>
+            <th>Rooms</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>Single beds</th>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th>Double beds</th>
+            <td>3</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <h2>Availability/Booking</h2>
+        <a href="#">Tripadvisor</a>
       </div>
     </div>
-    <div class="col-md-4">
-      <h1>Round House</h1>
-      <p>We have two round houses of different sizes.</p>
-      <table class="table">
-        <tr>
-          <th>Beds</th>
-          <td>4</td>
-        </tr>
-        <tr>
-          <th>Kitchen</th>
-          <td>Yes</td>
-        </tr>
-      </table>
-      <a href="#">Check availability and book here</a>
-    </div>
   </div>
-    
-</div><!-- container -->
+</div>
 
 {% endblock %}
