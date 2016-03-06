@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'web',
 ]
 
+FIXTURE_DIRS = [
+    os.path.join(BASE_DIR, 'web', 'fixtures'),
+]
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
